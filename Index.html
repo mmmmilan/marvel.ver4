@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marvel API</title>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link href="content/jquery-ui.css" rel="stylesheet" />
+    <script src="Scripts/jquery-ui.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+
+</head>
+<body>
+    <p style="font-size:2em!important;border:3px solid black!important;margin:0.5em 1em" class="lead text-center">MARVEL API</p>
+    <p class="lead text-center" id="p1"></p>
+    <hr/>
+
+    <div class="modal fade" id="modalni1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: lightgrey">
+                    <button id="Button1" type="button" class="close" data-dismiss="modal">&times</button>
+                    <h4 class="modal-title" style="align-content:center;color:black!important">Bookmark your favorite MARVEL character</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <button id="Button1" type="button" value="Unesi" onclick="AddClass()" class="b1 btn btn-group col-md-6" data-dissmiss="modal" style="background-color: lightgrey;border:1px solid black;margin:10px 0px 10px 12px"><span class="glyphicon glyphicon-hand-up" style="background-color: lightgrey;width:170px"><strong> Bookmark!</strong></span></button>
+                        <button id="Button2" onclick="MoveClass()" type="button" value="Unesi" class="b1 btn btn-group col-md-6" data-dissmiss="modal" style="background-color: lightgrey;float:right;border:1px solid black;margin:10px 12px 10px 0px "><span class="glyphicon glyphicon-hand-down"grey style="background-color: lightgrey;width:170px"> <strong> Unbookmark!</strong> </span></button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal" style="background-color: lightgrey;width:100%;color:black!important"><strong>Close</strong></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <form>
+        <div class="container">
+                <div class="row">
+                    <label for="inputHeroj" class="form-group col-md-6">Click on MARVEL character & bookmark it: </label>
+                    <input id="inputHeroj" placeholder='Just type "hu" for Hulk... or "spider" for Spider-man............' onkeyup="odlozeno()" class="imp form-control col-md-6">
+                </div>
+        </div>
+    </form>
+    <div class="container" >
+        <div class="row">
+            <div class="col col-md-12 col-xs-12 col-sm-12 " id="divrow">
+                <p id="p33"></p>
+            </div>
+        </div>
+    </div>
+ 
+
+    <script src="Scripts/SviHeroji.js"></script>
+    <script src="Scripts/OnLoadBookmarked.js"></script>
+    <script src="Scripts/AjaxToMarvel.js"></script>
+    <script src="Scripts/DoBookmark.js"></script>
+    <script>
+        var NoviLik;
+        var start;
+        var bookmarkirano = [];
+        var text;
+
+        function modalni() {
+            $('#modalni1').modal('show')
+        };
+        $('div').delegate('.c1', 'click', function () { 
+            text = $(this).text();
+        });
+    </script>
+</body>
+
+</html>

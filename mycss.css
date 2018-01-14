@@ -1,0 +1,38 @@
+﻿        body {
+            background-image: url("content/ave.jpg");
+            font-family:Lucida Console,Georgia,Arial;
+            font-size:2em;
+            font-weight: bold!important;
+            font-variant: small-caps;
+            color:red
+        }
+        .c1 {
+            width: 200px;
+            height: 350px;
+            margin: 15px;
+            font-size:2em;
+            color:black!important
+        }
+        .bookm {
+            border:1px;
+            border:1px solid black
+        }
+        .opaa {
+            font-size:2em;
+            color:black!important;
+            border:3px solid white!important;
+            outline-style:solid;
+            outline-color:black;
+            outline-width: medium;
+        }
+        .imp{
+            border-color:black;
+            width:70%!important
+        }
+        .b1 {
+            padding:5px;
+            width:auto
+        }
+        .b {
+            color:black!important
+        }
